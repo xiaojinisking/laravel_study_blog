@@ -27,7 +27,7 @@ class PostsTableSeeder extends Seeder
 //            'title'=>'abc'
 //        ]);
 
-        factory(\App\Models\Posts::class,'adminuser',20)->create();
+        factory(\App\Models\Posts::class,20)->create();
 
     }
 }
