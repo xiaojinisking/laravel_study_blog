@@ -1,0 +1,25 @@
+{
+  "name": "laravel_study_blog",
+  "description": "",
+  "main": "",
+  "authors": [
+    "<jinweifeng@wisesz.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/xiaojinisking/laravel_study_blog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_dl",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "datatables": "^1.10.13",
+    "datatables-plugins": "^1.10.13"
+  }
+}
