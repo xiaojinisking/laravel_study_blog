@@ -29,6 +29,12 @@ elixir(function(mix){
         .copy('vendor/bower_dl/datatables/media/js/jquery.dataTables.js','resources/assets/js')
         .copy('vendor/bower_dl/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css','resources/assets/less/other/dataTables.bootstrap.less')
         .copy('vendor/bower_dl/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js','resources/assets/js')
+        .copy('vendor/bower_dl/selectize/dist/css/**','public/assets/selectize/css')
+        .copy('vendor/bower_dl/selectize/dist/js/standalone/selectize.js','public/assets/selectize/')
+        .copy('vendor/bower_dl/pickadate/lib/compressed/themes/**','public/assets/pickadate/themes')
+        .copy('vendor/bower_dl/pickadate/lib/compressed/picker.js','public/assets/pickadate')
+        .copy('vendor/bower_dl/pickadate/lib/compressed/picker.date.js','public/assets/pickadate')
+        .copy('vendor/bower_dl/pickadate/lib/compressed/picker.time.js','public/assets/pickadate')
 
     mix.less('resources/assets/less/admin.less','public/assets/css/admin.css');
     mix.scripts(

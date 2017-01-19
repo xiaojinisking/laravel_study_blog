@@ -10,7 +10,10 @@
         "barryvdh/laravel-ide-helper": "^2.2",
         "dflydev/apache-mime-types": "^1.0",
         "react/stream": "^0.4.5",
-        "guzzle/stream": "^3.9"
+        "guzzle/stream": "^3.9",
+        "doctrine/dbal": "^2.5",
+        "michelf/php-markdown": "^1.7",
+        "michelf/php-smartypants": "1.6.0-beta1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
