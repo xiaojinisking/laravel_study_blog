@@ -17,3 +17,28 @@ function is_image($mimeType)
 {
     return starts_with($mimeType, 'image/');
 }
+
+/**
+ * 返回cheked状态
+ * @param $value
+ * @return string
+ */
+function checked($value)
+{
+    return $value ? 'checked' : '';
+}
+
+
+//上传图片的完整路径
+function page_image($value = null)
+{
+    if(empty($value)){
+        $value = config('blog.page_image');
+    }
+
+    if(! starts_with($value,'http') && $value[0] !='/'){
+        $value = config('blog.uploads.webpath').'/'.$value;
+    }
+
+    return $value;
+}
