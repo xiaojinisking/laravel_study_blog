@@ -13,7 +13,8 @@
         "guzzle/stream": "^3.9",
         "doctrine/dbal": "^2.5",
         "michelf/php-markdown": "^1.7",
-        "michelf/php-smartypants": "1.6.0-beta1"
+        "michelf/php-smartypants": "1.6.0-beta1",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

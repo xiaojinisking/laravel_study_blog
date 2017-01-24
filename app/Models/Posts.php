@@ -15,7 +15,7 @@ class Posts extends Model
 
     public function tags()
     {
-        return $this->belongsToMany('App\Models\Tag','post_tag_pivot');
+        return $this->belongsToMany('App\Models\Tag','post_tag_pivot','post_id','tag_id');
     }
 
     public function setTitleAttribute($value)
@@ -43,7 +43,7 @@ class Posts extends Model
         $markdown = new Markdown();
 
         $this->attributes['content_raw'] = $value;
-        $this->attributes['content_html'] = $markdown->toHtml($value);
+        $this->attributes['content_html'] = $markdown->defaultTransform($value);
     }
 
     /**
@@ -53,7 +53,7 @@ class Posts extends Model
      */
     public function syncTags(array $tags)
     {
-        Tag::addNeededTags($tags);
+        Tag::addNeededTags($tags);   //不存在的tags的进行新增
 
         if (count($tags)) {
             $this->tags()->sync(

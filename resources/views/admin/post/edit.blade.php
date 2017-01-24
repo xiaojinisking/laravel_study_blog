@@ -27,7 +27,7 @@
                         @include('admin.partials.errors')
                         @include('admin.partials.success')
 
-                        <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.post.update', $id) }}">
+                        <form class="form-horizontal" role="form" method="POST" action="/admin/post/{{ $id }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="_method" value="PUT">
 
@@ -76,7 +76,7 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <form method="POST" action="{{ route('admin.post.destroy', $id) }}">
+                        <form method="POST" action="/admin/post/{{ $id }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -96,7 +96,7 @@
     <script src="/assets/pickadate/picker.js"></script>
     <script src="/assets/pickadate/picker.date.js"></script>
     <script src="/assets/pickadate/picker.time.js"></script>
-    <script src="/assets/selectize/selectize.min.js"></script>
+    <script src="/assets/selectize/selectize.js"></script>
     <script>
         $(function() {
             $("#publish_date").pickadate({

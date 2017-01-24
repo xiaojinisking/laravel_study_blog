@@ -35,6 +35,7 @@ elixir(function(mix){
         .copy('vendor/bower_dl/pickadate/lib/compressed/picker.js','public/assets/pickadate')
         .copy('vendor/bower_dl/pickadate/lib/compressed/picker.date.js','public/assets/pickadate')
         .copy('vendor/bower_dl/pickadate/lib/compressed/picker.time.js','public/assets/pickadate')
+        .copy('vendor/bower_dl/clean-blog/less/**','resources/assets/less/clean-blog')
 
     mix.less('resources/assets/less/admin.less','public/assets/css/admin.css');
     mix.scripts(

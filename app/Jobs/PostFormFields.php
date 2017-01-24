@@ -61,12 +61,14 @@ class PostFormFields implements ShouldQueue
             $fields[$filedName] = old($filedName,$filedValue);
         }
 
-        return array_merge(
+        $data =  array_merge(
           $fields,
             [
                 'allTags'=>''
             ]
         );
+
+        return $data;
     }
 
     protected function fieldsFromModel($id,array $fields)
