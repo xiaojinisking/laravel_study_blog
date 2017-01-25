@@ -37,9 +37,17 @@ elixir(function(mix){
         .copy('vendor/bower_dl/pickadate/lib/compressed/picker.time.js','public/assets/pickadate')
         .copy('vendor/bower_dl/clean-blog/less/**','resources/assets/less/clean-blog')
 
-    mix.less('resources/assets/less/admin.less','public/assets/css/admin.css');
+
     mix.scripts(
         ['jquery.js','bootstrap.js','jquery.dataTables.js','dataTables.bootstrap.js'],
         'public/assets/js/admin.js'
     );
+    mix.scripts([
+        'js/jquery.js',
+        'js/bootstrap.js',
+        'js/blog.js'
+    ], 'public/assets/js/blog.js', 'resources//assets');
+
+    mix.less('resources/assets/less/admin.less','public/assets/css/admin.css');
+    mix.less('resources/assets/less/blog.less','public/assets/css/blog.css');
 });
